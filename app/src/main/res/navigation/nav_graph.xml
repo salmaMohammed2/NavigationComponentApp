@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeDest">
+    <fragment
+        android:id="@+id/homeDest"
+        android:name="com.example.navigationcomponentapp.HomeDest"
+        android:label="fragment_home_dest"
+        tools:layout="@layout/fragment_home_dest" >
+        <action
+            android:id="@+id/action_homeDest_to_flowStepOneDest"
+            app:destination="@id/flowStepOneDest">
+            <argument
+                android:name="flowNumber"
+                app:argType="integer"
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/flowStepOneDest"
+        android:name="com.example.navigationcomponentapp.FlowStepOneDest"
+        android:label="fragment_flow_step_one_dest"
+        tools:layout="@layout/fragment_flow_step_one_dest" >
+        <argument
+            android:name="flowNumber"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/flowStepTwoDest" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/flowStepTwoDest"
+        android:name="com.example.navigationcomponentapp.FlowStepTwoDest"
+        android:label="fragment_flow_step_two_dest"
+        tools:layout="@layout/fragment_flow_step_two_dest" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/homeDest"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/deepLinkDest"
+        android:name="com.example.navigationcomponentapp.DeepLinkDest"
+        android:label="fragment_deep_link_dest"
+        tools:layout="@layout/fragment_deep_link_dest" />
+    <fragment
+        android:id="@+id/settingDest"
+        android:name="com.example.navigationcomponentapp.settingDest"
+        android:label="fragment_setting_dest"
+        tools:layout="@layout/fragment_setting_dest" />
+</navigation>

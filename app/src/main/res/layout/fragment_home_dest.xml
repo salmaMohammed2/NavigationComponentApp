@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/home_dest"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeDest">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250sp"
+        android:gravity="center"
+        android:textSize="35sp"
+        android:text="Home" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/navigationToDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigate to Destination"
+        android:layout_margin="15sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/navigationWithAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigate with Action"
+        android:layout_marginBottom="15sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginStart="15sp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
